@@ -5,7 +5,7 @@ files:
     destination: /var/lib/tomcat7/webapps
 hooks:
    BeforeInstall:
-     - location: scripts/restore_database
+     - location: scripts/restore_database.sh
        timeout: 300
        runas: root
 
