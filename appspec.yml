@@ -3,4 +3,9 @@ os: linux
 files:
   - source: /mongodbwebapp.war
     destination: /var/lib/tomcat7/webapps
+hooks:
+   BeforeInstall:
+     - location: scripts/restore_database
+       timeout: 300
+       runas: root
 
