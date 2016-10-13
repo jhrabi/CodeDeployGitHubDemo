@@ -3,8 +3,10 @@ os: linux
 files:
   - source: /mongodbwebapp.war
     destination: /var/lib/tomcat7/webapps
+  - source: /dump
+    destination: /var/lib/mongo
 hooks:
-   BeforeInstall:
+   AfterInstall:
      - location: scripts/restore_database.sh
        timeout: 300
        runas: root
