@@ -4,7 +4,7 @@ files:
   - source: /mongodbwebapp.war
     destination: /var/lib/tomcat7/webapps
   - source: /dump
-    destination: /var/lib/mongo
+    destination: /var/lib/mongo/dump
 hooks:
    AfterInstall:
      - location: scripts/restore_database.sh
